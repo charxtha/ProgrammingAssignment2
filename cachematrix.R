@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
+
+## function creating a special matrix object that can cache its inverse for the input
 
 makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
   s <- NULL
@@ -17,7 +16,7 @@ makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
        getsolve = getsolve)
 }
 ##
-## Same here, changed "mean" to "solve" and "m" to "s"
+## computes the inverse of the special matrix given by makeCacheMatrix function
 cacheSolve <- function(x, ...) {
   s <- x$getsolve()
   if(!is.null(s)) {
